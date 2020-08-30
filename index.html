@@ -1,0 +1,130 @@
+<html>
+<head>
+    <title>task 2 & 3</title>
+    <style>
+        body {
+            background-image: url("img/bg.jpg");
+            
+        }
+        
+        div {
+            width:500px;
+            height:400px;
+            position:absolute;
+            top: 50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            text-align: center;
+            font-size:20px;
+            background-image: url("img/bg1.png");
+            background-color: white; 
+            color: black;
+            border: 5px solid black;
+        }
+        
+        #green {
+            color: black;
+            border: 1px solid black;
+            background-color: green;
+            border-radius: 5px;
+        }
+        
+        #red {
+            color: black;
+            border:1px solid black;
+            background-color: red;
+            border-radius: 5px;
+        }
+        
+        #blue {
+            color: black;
+            border: 1px solid black;
+            background-color: blue;
+            border-radius: 5px;
+        }
+        #y {
+            color: black;
+            border: 1px solid black;
+            background-color: yellow;
+            border-radius: 5px;
+        }
+        #g {
+            color: black;
+            border: 1px solid black;
+            background-color: grey;
+            border-radius: 5px;
+        }
+        #o {
+            color: black;
+            border: 1px solid black;
+            background-color: orangered;
+            border-radius: 5px;
+        }
+        label
+         {
+          border: 1px solid black;
+          background-color: wheat;
+          transform:translate(-50%,-50%);
+        }
+        h1
+        {
+            font-size:40px;
+        }
+        p
+        {
+            font-size:30px;
+        }
+        .ab
+        {
+            background-color: greenyellow;  
+        }
+        .ba
+        {
+            background-color: rgb(252, 52, 52);  
+        }
+    </style>
+    <script>
+        
+        function changeboxBackclr(color){
+        document.getElementById("main").style.background = color;
+        }
+        function changeBackclr(color)
+        {
+        document.body.style.background = color;
+        }
+        var i = 0;
+    function incNumber()
+    {
+       i++;
+        document.getElementById("display").innerHTML = i;
+    }
+
+    function decNumber() 
+    {
+        i--;
+        document.getElementById("display").innerHTML = i;
+    }
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <h1 >Learn Basics....</h1>
+        <p font-size:80px;>Change bgcolor</p>
+        <label>INBOX Bgcolor change:</label>
+        <button onclick="changeboxBackclr('green');"id="green">Green</button>
+        <button onclick="changeboxBackclr('red');"  id="red"  >red</button>
+        <button onclick="changeboxBackclr('blue');" id="blue" >Blue</button><br><br>
+        <label>OUTBOX Bgcolor change:</label>
+        <button  onclick="changeBackclr('yellow');"id="y">Yellow</button>
+        <button  onclick="changeBackclr('grey');"  id="g">grey</button>
+        <button  onclick="changeBackclr('orange');"id="o">Orange</button><br>
+        <p>simple js..Counter</p>
+        <button  id="dec" class = 'ab'onclick="decNumber()">-</button>
+        <label id="display"  border: 3px solid black;>0</label>
+        <button  id="inc" class = 'ba'onclick="incNumber()">+</button>
+     </div>
+
+
+</body>
+
